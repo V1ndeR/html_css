@@ -364,5 +364,63 @@
             </p>
         </div>
     </footer>
+    <section class="modal_login">
+        <h2>
+            Личный кабинет
+        </h2>
+        <p class="modal_description">
+            Введите пожалуйста свой Email и пароль
+        </p>
+        <form class="login_form">
+            <p>
+                <label class="visually_hidden" for="user-login">
+                    Email
+                </label>
+                <input class="login_icon-user" id="user-login" type="text" name="login" placeholder="Email">
+            </p>
+            <p>
+                <label class="visually_hidden" for="user-password">
+                    Пароль
+                </label>
+                <input class="login_icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login_help">
+                <label class="login_checkbox">
+                    <input type="checkbox" name="remember" class="checkbox">
+                    <span class="checkbox-indicator"></span>
+                    Запомнить меня
+                </label>
+                <a class="restore" href="#">
+                    Забыл пароль?
+                </a>
+            </p>
+            <div class="button_wrapper">
+                <button class="button" type="submit">
+                    Вход
+                </button>
+                <button class="button" type="submit">
+                    Регистрация
+                </button>
+            </div>
+        </form>
+        <button class="modal_login-close" type="button">
+            Закрыть
+        </button>
+    </section>
+    <script>
+        const linkLogin = document.querySelector(".user_nav-link");
+        const popup = document.querySelector(".modal_login");
+        const closeLogin = document.querySelector(".modal_login-close");
+
+        linkLogin.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.add("modal_login-show");
+        });
+
+        closeLogin.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            popup.classList.remove("modal_login-show");
+        });
+    </script>
 </body>
 </html>
