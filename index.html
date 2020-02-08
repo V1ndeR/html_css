@@ -58,7 +58,7 @@
             Мир фильмов
         </h1>
         <section class="video_container">
-            <video class="video_bg" src="video/witcher.webm"
+            <video class="video_bg" src="video/witcher.webm" data-video-mp4="video/witcher.mp4"
                    preload="auto" autoplay loop>
                 <source src="video/witcher.mp4" type="video/mp4">
                 <source src="video/witcher.webm" type="video/webm">
@@ -376,13 +376,13 @@
                 <label class="visually_hidden" for="user-login">
                     Email
                 </label>
-                <input class="login_icon-user" id="user-login" type="text" name="login" placeholder="Email">
+                <input class="login_icon-user" id="user-login" type="text" name="login" placeholder="Email" required>
             </p>
             <p>
                 <label class="visually_hidden" for="user-password">
                     Пароль
                 </label>
-                <input class="login_icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                <input class="login_icon-password" id="user-password" type="password" name="password" placeholder="Пароль" required>
             </p>
             <p class="login_help">
                 <label class="login_checkbox">
@@ -411,10 +411,12 @@
         const linkLogin = document.querySelector(".user_nav-link");
         const popup = document.querySelector(".modal_login");
         const closeLogin = document.querySelector(".modal_login-close");
+        const login = document.querySelector("[name=login]");
 
         linkLogin.addEventListener("click", function (evt) {
             evt.preventDefault();
             popup.classList.add("modal_login-show");
+            login.focus();
         });
 
         closeLogin.addEventListener("click", function (evt) {
