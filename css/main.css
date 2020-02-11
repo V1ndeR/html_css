@@ -211,6 +211,7 @@ h3 {
     position: absolute;
     top: 0;
     margin: 0 auto;
+    cursor: pointer;
     z-index: 3;
 
 }
@@ -483,11 +484,27 @@ h3 {
     padding: 0 0 20px 0;
 }
 
+.video_trailer {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    z-index: 5;
+}
+
+.video_trailer-show {
+    display: block;
+}
+
 .video {
     position: relative;
     width: 400px;
     padding-bottom: 56.25%;
     background-color: #000000;
+}
+
+.video_top {
+    width: 600px;
 }
 
 .video__link {
