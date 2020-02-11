@@ -5,12 +5,14 @@ const login = document.querySelector("[name=login]");
 const buttonTrailer = document.querySelector(".top_button-link");
 const trailerMain = document.querySelector(".video_trailer");
 const overlay = document.querySelector(".modal_overlay");
-const closeVideo = document.querySelector(".modal_video-close")
+const closeVideo = document.querySelector(".modal_video-close");
+const videoButton = document.querySelector("[type=button]");
 
 buttonTrailer.addEventListener("click", function (evt) {
     evt.preventDefault();
     trailerMain.classList.add("video_trailer-show");
     overlay.classList.add("overlay_show");
+    videoButton.focus();
 });
 
 closeVideo.addEventListener("click", function (evt) {
