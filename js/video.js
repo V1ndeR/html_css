@@ -6,6 +6,8 @@ function findVideos() {
     }
 }
 
+
+
 function setupVideo(video) {
     let link = video.querySelector('.video__link');
     let media = video.querySelector('.video__media');
